@@ -1,1 +1,25 @@
-<ckeditor [editor]="Editor" [config]="config" data="<p>Hello, world!</p>"></ckeditor>
+<mat-form-field>
+  <mat-label>Select a language</mat-label>
+  <mat-select [(value)]="language" (selectionChange)="onLanguageChange($event.value)">
+    <mat-option value="en">English</mat-option>
+    <mat-option value="fr">Français</mat-option>
+    <mat-option value="de">Deutsch</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title> Editor</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    @if (editorIsAlive) {
+      <div>
+       <ckeditor
+       [editor]="Editor" 
+       [config]="config"
+       (ready)="onEditorReady($event)"
+       data="<p>Hello, world!</p>"></ckeditor>
+      </div>
+    }
+  </mat-card-content>
+</mat-card>
