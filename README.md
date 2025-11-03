@@ -3,6 +3,9 @@ Proof of concept for Translation a selected text in ckeditor
 
 We have a base document in English and the same document in different languages. The user wants to add a new paragraph into the English version and insert the translated version of the new text into the other documents.
 
+![ckeditor-translator-plugin-poc](https://github.com/user-attachments/assets/c2e4631c-f274-406e-9347-0d2abbcbb04c)
+
+
 
 The translation is fake, of course, but the process mostly OK. It is only a POC. The "Translate" button has two different tasks:
 
